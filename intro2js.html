@@ -1,0 +1,35 @@
+<script>
+  document.write("Employee Name 1 : James Reyes <br>")
+  document.write("Rate Per Day : 500 <br>")
+  document.write("Days Worked : 10 <br><br>")
+
+  document.write("Employee Name 2 : Roger Lopez <br>")
+  document.write("Rate Per Day : 700 <br>")
+  document.write("Days Worked : 10 <br><br>")
+
+  document.write("Employee Name 3 : Lenny Soriano <br>")
+  document.write("Rate Per Day : 600 <br>")
+  document.write("Days Worked : 10 <br><br>")
+</script>
+
+<button onclick="compute()">COMPUTE</button>
+<div id="output"></div>
+
+<script>
+function compute() {
+
+  const employees = [
+    { name: "James Reyes", rate: 500, days: 10 },
+    { name: "Roger Lopez", rate: 700, days: 10 },
+    { name: "Lenny Soriano", rate: 600, days: 10 }
+  ];
+
+  let result = "";
+  employees.forEach((emp, i) => {
+    const salary = emp.rate * emp.days;
+    result += `<br>Employee Name ${i + 1} : ${emp.name}<br>`;
+    result += `Salary : ${salary.toLocaleString("en-US")}<br>`;
+  });
+
+  document.getElementById("output").innerHTML = result;
+}
