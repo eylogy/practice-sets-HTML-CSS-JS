@@ -1,1 +1,2 @@
-# practice-sets-HTML-CSS-JS
+# Practice sets
+- HTML / CSS / JS
